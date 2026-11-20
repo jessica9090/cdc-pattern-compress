@@ -1,0 +1,42 @@
+---
+title: "Benchmark Tables"
+format:
+  html:
+    theme: cosmo
+    embed-resources: true
+    page-layout: full
+    columns: 1000
+    include-in-header:
+      text: |
+        <style>
+        table { display: block; width: auto !important; overflow-x: auto; font-size: 0.875em; }
+        th, td { white-space: nowrap; padding: 0.4rem 0.6rem !important; }
+        </style>
+---
+
+| Term | Definition |
+|---|---|
+| cell | grid cell, source $A$ / chunker $M$ |
+| source $A$ | source alphabet size |
+| $M$ | chunker boundary-mask bits |
+| $N$ | chunks in the pattern |
+| $D$ | distinct chunks |
+| $N/D$ | mean occurrences per distinct chunk |
+| $H_0$ | order-0 empirical entropy of the pattern, bits/chunk |
+| mean | mean over seeds 1 and 2 (all table values) |
+| Table 2 values | compressed size, bits/chunk; bold = smallest in the column |
+| *best AMC-T*, *best AMC-G* | smallest variant of that coder in the cell |
+| *vs MCD* | size of that variant relative to MCD |
+| encode, decode | median time of 5 runs |
+
+## Table 1: Pattern statistics
+
+{{< include tables/table1.md >}}
+
+## Table 2: Compressed size (bits/chunk)
+
+{{< include tables/table2.md >}}
+
+## Table 3: Encode and decode time
+
+{{< include tables/table3.md >}}

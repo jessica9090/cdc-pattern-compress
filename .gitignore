@@ -1,0 +1,13 @@
+# Build outputs (make)
+bin/
+build/
+
+# Benchmark sources and patterns (bench/benchmark.py)
+bench/work/
+
+# Quarto preview leftovers (bench/tables.html itself is tracked)
+*.quarto_ipynb*
+*_files/
+
+# Python bytecode (e.g. from importing src/datagen/dedup_datagen.py)
+__pycache__/
